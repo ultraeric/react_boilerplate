@@ -4,10 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import io from 'socket.io-client';
 
-//Needed for Material-ui
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
+import {staticData} from 'staticResources';
 
 import {reducer} from './reducer';
 import {Footer} from 'Footer';
@@ -24,13 +21,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <MuiThemeProvider>
-        <div className={'app-root'}>
-          <h1>Hi</h1>
-          <p>{store.getState().staticData.personalData.email}</p>
-          <Footer/>
-        </div>
-      </MuiThemeProvider>
+      <div className={'app-root'}>
+        <h1>Hi</h1>
+        <p>{staticData.personalData.email}</p>
+        <Footer/>
+      </div>
     );
   }
 }
