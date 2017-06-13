@@ -8,7 +8,7 @@ import {staticData} from 'staticResources';
 
 import {reducer} from './reducer';
 import {Footer} from 'Footer';
-import './style.css'
+import './style.scss'
 
 
 let store = createStore(reducer);

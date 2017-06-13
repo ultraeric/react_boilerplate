@@ -11,10 +11,11 @@ module.exports = {
       Footer: path.resolve(__dirname, './App/Footer/index.js'),
       staticResources: path.resolve(__dirname, './App/staticResources/index.js'),
       staticData: path.resolve(__dirname, './App/staticResources/staticData/index.js'),
-      staticStyles: path.resolve(__dirname, './App/staticResources/staticStyles')
+      staticStyles: path.resolve(__dirname, './App/staticResources/staticStyles'),
+      materialize: path.resolve(__dirname, './App/staticResources/staticStyles/vendor/materialize/')
     },
     extensions: [
-      '.js', '.jsx', '.css', '.less'
+      '.js', '.jsx', '.css', ',scss'
     ]
   },
   module: {
@@ -29,10 +30,8 @@ module.exports = {
       },
       { test: /\.css$/, loader: "style-loader!css-loader" },
       {
-        test: /\.less$/,
-        use: [{loader: "style-loader"},
-              {loader: "css-loader"},
-              {loader: "less-loader"}]
+        test: /\.scss$/,
+        use: [{loader: "style-loader"}, {loader: "css-loader"}, {loader: "sass-loader"}]
       }
     ]
   }
