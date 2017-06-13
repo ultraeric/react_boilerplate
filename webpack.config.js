@@ -14,7 +14,7 @@ module.exports = {
       staticStyles: path.resolve(__dirname, './App/staticResources/staticStyles')
     },
     extensions: [
-      '.js', '.jsx', '.css'
+      '.js', '.jsx', '.css', '.less'
     ]
   },
   module: {
@@ -27,7 +27,13 @@ module.exports = {
           presets: ['react', ['es2015', { modules: false }]]
         }
       },
-      { test: /\.css$/, loader: "style-loader!css-loader" }
+      { test: /\.css$/, loader: "style-loader!css-loader" },
+      {
+        test: /\.less$/,
+        use: [{loader: "style-loader"},
+              {loader: "css-loader"},
+              {loader: "less-loader"}]
+      }
     ]
   }
 };
