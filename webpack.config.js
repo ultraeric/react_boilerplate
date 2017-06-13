@@ -9,10 +9,12 @@ module.exports = {
   resolve: {
     alias: {
       Footer: path.resolve(__dirname, './App/Footer/index.js'),
-      staticResources: path.resolve(__dirname, './App/staticResources/index.js')
+      staticResources: path.resolve(__dirname, './App/staticResources/index.js'),
+      staticData: path.resolve(__dirname, './App/staticResources/staticData/index.js'),
+      staticStyles: path.resolve(__dirname, './App/staticResources/staticStyles')
     },
     extensions: [
-      '.js', '.jsx'
+      '.js', '.jsx', '.css'
     ]
   },
   module: {

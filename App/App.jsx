@@ -23,7 +23,6 @@ class App extends React.Component {
     return (
       <div className={'app-root'}>
         <h1>Hi</h1>
-        <p>{staticData.personalData.email}</p>
         <Footer/>
       </div>
     );
