@@ -10,14 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.2",
-    "material-ui": "^1.0.0-alpha.17",
     "mongodb": "^2.2.25",
     "react": "^15.4.2",
+    "react-bootstrap": "^0.31.0",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.5",
     "react-router": "^4.0.0",
     "react-router-dom": "^4.0.0",
-    "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.6.0",
     "socket.io": "^1.7.3",
     "socket.io-client": "^1.7.3"
