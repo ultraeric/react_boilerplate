@@ -1,0 +1,14 @@
+.personalDataGrid {
+  padding: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.personalDataItem {
+  text-align: center;
+}
+
+.personalDataItem a {
+  font-size: 12px;
+  color: #bdbdbd;
+}

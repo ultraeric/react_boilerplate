@@ -1,13 +1,15 @@
 var path = require('path');
 
 module.exports = {
-  entry: './app/app.jsx',
+  entry: './App/App.jsx',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
   },
   resolve: {
     alias: {
+      Footer: path.resolve(__dirname, './App/Footer/index.js'),
+      staticResources: path.resolve(__dirname, './App/staticResources/index.js')
     },
     extensions: [
       '.js', '.jsx'
