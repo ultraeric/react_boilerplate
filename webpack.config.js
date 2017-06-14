@@ -9,10 +9,9 @@ module.exports = {
   resolve: {
     alias: {
       Footer: path.resolve(__dirname, './App/Footer/index.js'),
-      staticResources: path.resolve(__dirname, './App/staticResources/index.js'),
-      staticData: path.resolve(__dirname, './App/staticResources/staticData/index.js'),
-      staticStyles: path.resolve(__dirname, './App/staticResources/staticStyles'),
-      materialize: path.resolve(__dirname, './App/staticResources/staticStyles/vendor/materialize/')
+      staticResources: path.resolve(__dirname, './App/staticResources'),
+      staticData: path.resolve(__dirname, './App/staticResources/staticData'),
+      staticStyles: path.resolve(__dirname, './App/staticResources/staticStyles')
     },
     extensions: [
       '.js', '.jsx', '.css', ',scss'
@@ -28,7 +27,13 @@ module.exports = {
           presets: ['react', ['es2015', { modules: false }]]
         }
       },
-      { test: /\.css$/, loader: "style-loader!css-loader" },
+      {
+        test: /\.css$/,
+        loaders: [
+          'style-loader',
+          'css-loader?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader?sourceMap&sourceComments',
+        ],
+      },
       {
         test: /\.scss$/,
         use: [{loader: "style-loader"}, {loader: "css-loader"}, {loader: "sass-loader"}]

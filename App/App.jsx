@@ -10,7 +10,6 @@ import {reducer} from './reducer';
 import {Footer} from 'Footer';
 import './style.scss'
 
-
 let store = createStore(reducer);
 
 class App extends React.Component {
@@ -22,7 +21,6 @@ class App extends React.Component {
   render() {
     return (
       <div className={'app-root'}>
-        <h1>Hi</h1>
         <Footer/>
       </div>
     );

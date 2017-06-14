@@ -11,6 +11,7 @@ class Footer extends React.Component {
   render() {
     return (
       <div className={'footer'}>
+        <p>Hi</p>
       </div>
     );
   }
