@@ -8,7 +8,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      Footer: path.resolve(__dirname, './App/Footer/index.js'),
+      Footer: path.resolve(__dirname, './App/Footer'),
+      Header: path.resolve(__dirname, './App/Header'),
       staticResources: path.resolve(__dirname, './App/staticResources'),
       staticData: path.resolve(__dirname, './App/staticResources/staticData'),
       staticStyles: path.resolve(__dirname, './App/staticResources/staticStyles')
@@ -31,8 +32,15 @@ module.exports = {
         test: /\.css$/,
         loaders: [
           'style-loader',
-          'css-loader?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader?sourceMap&sourceComments',
+          'css-loader?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader?sourceMap&sourceComments'
         ],
+        include: path.join(__dirname, 'node_modules'),
+        exclude: /flexboxgrid/
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader?modules',
+        include: /flexboxgrid/
       },
       {
         test: /\.scss$/,

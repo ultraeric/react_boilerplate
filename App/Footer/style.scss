@@ -1,0 +1,35 @@
+@import '~staticStyles/colors.scss';
+
+.footer {
+  margin-top: 2.5%;
+  margin-bottom: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  min-height: 10%;
+  position: absolute;
+  background-color: $primary-dark;
+  color: $neutral;
+
+  h3, h5{
+    margin: 0px;
+    margin-bottom: 1px;
+    padding-left: 1.2%;
+
+    a {
+      color: $neutral;
+    }
+  }
+
+  .important-link, .site-link, .icon-links, .site-links {
+    opacity: 100;
+    display: inline;
+    color: $neutral;
+
+    svg {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      padding-left: 1%;
+    }
+  }
+}
