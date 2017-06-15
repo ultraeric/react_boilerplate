@@ -11,14 +11,19 @@
   background-color: $primary-dark;
   color: $neutral;
 
-  h3, h5{
+  h5 {
     margin: 0px;
-    margin-bottom: 1px;
+    margin-top: 0.25%;
+    margin-bottom: 1%;
     padding-left: 1.2%;
-
     a {
       color: $neutral;
     }
+  }
+
+  h3 {
+    margin: 0px;
+    padding-left: 1.2%;
   }
 
   .important-link, .site-link, .icon-links, .site-links {
