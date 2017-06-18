@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import './style.scss';
 import {staticData} from 'staticResources';
 import {bindActionCreators} from 'redux';
+import {Row, Col} from 'react-flexbox-grid';
 
 class HomePage extends React.Component {
   constructor() {
@@ -17,6 +18,8 @@ class HomePage extends React.Component {
           <h1>Home</h1>
         </div>
         <div className={'page-content'}>
+          <Row>
+          </Row>
         </div>
       </div>
     );
