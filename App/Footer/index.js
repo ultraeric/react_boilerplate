@@ -1,3 +1,4 @@
 import {stateTree} from './stateTree';
 import {Footer} from './Footer';
-export {stateTree, Footer};
+import {reducer} from './reducer';
+export {stateTree, Footer, reducer};

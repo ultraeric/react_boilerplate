@@ -18,12 +18,21 @@ class Footer extends React.Component {
     return (
       <div className={'footer'}>
         <div className={'icon-links'}>
-          <Link className={'important-link'} href={personalData.github} label={''} icon={<FaGithubSquare size={48}/>}/>
-          <Link className={'important-link'} href={personalData.linkedin} label={''} icon={<FaLinkedin size={48}/>}/>
-          <Link className={'important-link'} href={'mailto:' + personalData.email} label={''} icon={<MdMail size={48}/>}/>
+          <Link className={'important-link'}
+            href={personalData.github}
+            label={''}
+            icon={<FaGithubSquare size={'2em'}/>}/>
+          <Link className={'important-link'}
+            href={personalData.linkedin}
+            label={''}
+            icon={<FaLinkedin size={'2em'}/>}/>
+          <Link className={'important-link'}
+            href={'mailto:' + personalData.email}
+            label={''}
+            icon={<MdMail size={'2em'}/>}/>
         </div>
-        <h3>Eric Hou 2017</h3>
-        <h5>{personalData.phone}&emsp;|&emsp;<a href={personalData.website}>website</a></h5>
+        <h4>Eric Hou 2017</h4>
+        <h6>{personalData.phone}&emsp;|&emsp;<a href={personalData.website}>website</a></h6>
     </div>
     );
   }

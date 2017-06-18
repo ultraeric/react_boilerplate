@@ -1,4 +1,5 @@
 var path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './App/App.jsx',
@@ -10,6 +11,9 @@ module.exports = {
     alias: {
       Footer: path.resolve(__dirname, './App/Footer'),
       Header: path.resolve(__dirname, './App/Header'),
+      MainMenu: path.resolve(__dirname, './App/MainMenu'),
+      Pages: path.resolve(__dirname, './App/Pages'),
+      HomePage: path.resolve(__dirname, './App/Pages/HomePage'),
       staticResources: path.resolve(__dirname, './App/staticResources'),
       staticData: path.resolve(__dirname, './App/staticResources/staticData'),
       staticStyles: path.resolve(__dirname, './App/staticResources/staticStyles')
@@ -24,8 +28,8 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
-        options: {
-          presets: ['react', ['es2015', { modules: false }]]
+        query: {
+          presets:[ 'es2015', 'react', 'stage-2' ]
         }
       },
       {
@@ -47,5 +51,27 @@ module.exports = {
         use: [{loader: "style-loader"}, {loader: "css-loader"}, {loader: "sass-loader"}]
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('development')
+      }
+    })
+    // ,
+    // new webpack.optimize.UglifyJsPlugin({
+    //   comments: false, // remove comments
+    //   compress: {
+    //     unused: true,
+    //     dead_code: true, // big one--strip code that will never execute
+    //     warnings: false, // good for prod apps so users can't peek behind curtain
+    //     drop_debugger: true,
+    //     conditionals: true,
+    //     evaluate: true,
+    //     drop_console: false, // strips console statements
+    //     sequences: true,
+    //     booleans: true,
+    //   }
+    // })
+  ]
 };

@@ -1,6 +1,14 @@
 @import '~staticStyles/colors.scss';
 
 .header {
-  min-height: 7.5%;
   background-color: $primary-dark;
+  color: $light-text;
+  header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: $light-text;
+    background-color: $primary-dark;
+  }
 }

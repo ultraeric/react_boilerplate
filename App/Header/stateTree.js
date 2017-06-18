@@ -1,7 +1,7 @@
 let stateTree = {
   title: 'Eric Hou',
-  leftIconFunction: () => {},
-  rightIconFunction: () => {}
+  onLeftIconClick: () => {console.log('hi');},
+  onRightIconClick: () => {}
 };
 
 export {stateTree};

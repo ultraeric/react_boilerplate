@@ -1,0 +1,10 @@
+@import '~staticStyles/colors.scss';
+
+.page-header {
+  background-color: $primary;
+  padding: 25px;
+  h1 {
+    margin: 0px;
+    padding-left: 23px;
+  }
+}

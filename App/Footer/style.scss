@@ -1,40 +1,37 @@
 @import '~staticStyles/colors.scss';
 
 .footer {
-  margin-top: 2.5%;
   margin-bottom: 0px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  min-height: 10%;
-  position: absolute;
+  height: 90px;
+  min-width: 300px;
   background-color: $primary-dark;
   color: $neutral;
 
-  h5 {
+  h6 {
     margin: 0px;
-    margin-top: 0.25%;
-    margin-bottom: 1%;
-    padding-left: 1.2%;
+    margin-top: 0px;
+    padding-left: 35px;
     a {
       color: $neutral;
     }
   }
 
-  h3 {
+  h4 {
     margin: 0px;
-    padding-left: 1.2%;
+    padding-left: 35px;
+  }
+
+  .icon-links {
+    padding-top: 10%;
+    padding-left: 33px;
   }
 
   .important-link, .site-link, .icon-links, .site-links {
     opacity: 100;
     display: inline;
     color: $neutral;
-
     svg {
-      margin-top: 10px;
-      margin-bottom: 5px;
-      padding-left: 1%;
+      padding-top: 0.75em;
     }
   }
 }

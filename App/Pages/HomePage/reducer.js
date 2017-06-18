@@ -8,4 +8,6 @@ function reducer(state = stateTree, action) {
   }
 }
 
+// reducer = combineReducers();
+
 export {reducer};
