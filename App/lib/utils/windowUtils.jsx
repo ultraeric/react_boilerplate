@@ -21,10 +21,11 @@ window.addEventListener('resize', () => {
     for(var item in componentsToUpdate) {
       item.updateWindowSize();
     }
+    lastUpdate = newTime;
   }
 });
 
-//HOC function that provides windowSize prop to child. This is in CSS px
+//HOC function that provides windowSize prop to child. {width, height}. This is in CSS px
 function provideWindowSize(WrappedComponent) {
   return class WindowSizeWrapped extends React.Component {
     constructor() {
@@ -64,9 +65,9 @@ function provideWindowSize(WrappedComponent) {
   }
 }
 
-//HOC function that provides screenType prop to child
-function provideScreenType(WrappedComponent) {
-  class ScreenTypeWrapped extends React.Component {
+//HOC function that provides screenType prop 'l', 'm', or 's' to child
+function provideSizeClass(WrappedComponent) {
+  class SizeClassWrapped extends React.Component {
     constructor(props) {
       super(props);
       this.getSizeClass = this.getSizeClass.bind(this);
@@ -101,5 +102,7 @@ function provideScreenType(WrappedComponent) {
   }
 
   //Returns HOC with window size provided
-  return provideWindowSize(ScreenTypeWrapped);
+  return provideWindowSize(SizeClassWrapped);
 }
+
+export {provideWindowSize, provideSizeClass};
