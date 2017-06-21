@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './style.scss';
-import {staticData} from 'staticResources';
+import {personalData} from 'data';
 
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
@@ -14,8 +14,6 @@ import MdMenu from 'react-icons/lib/md/menu';
 import MdHome from 'react-icons/lib/md/home';
 
 import {actionCreators as mainMenuActionCreators} from 'MainMenu';
-
-let personalData = staticData.personalData;
 
 
 class Header extends React.Component {

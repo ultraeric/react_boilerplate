@@ -1,5 +1,7 @@
 var path = require('path');
 const webpack = require('webpack');
+var _ = require('lodash');
+var os = require('os');
 
 module.exports = {
   entry: './App/App.jsx',
@@ -14,9 +16,9 @@ module.exports = {
       MainMenu: path.resolve(__dirname, './App/MainMenu'),
       Pages: path.resolve(__dirname, './App/Pages'),
       HomePage: path.resolve(__dirname, './App/Pages/HomePage'),
-      staticResources: path.resolve(__dirname, './App/staticResources'),
-      staticData: path.resolve(__dirname, './App/staticResources/staticData'),
-      staticStyles: path.resolve(__dirname, './App/staticResources/staticStyles')
+      assets: path.resolve(__dirname, './App/assets'),
+      data: path.resolve(__dirname, './App/assets/data'),
+      styles: path.resolve(__dirname, './App/assets/styles')
     },
     extensions: [
       '.js', '.jsx', '.css', ',scss'

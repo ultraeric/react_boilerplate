@@ -5,8 +5,6 @@ import {createStore} from 'redux';
 import {BrowserRouter, Route} from 'react-router-dom';
 import io from 'socket.io-client';
 
-import {staticData} from 'staticResources';
-
 import {reducer} from './reducer';
 
 import './style.scss'

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
 import './style.scss';
-import {staticData} from 'staticResources';
 import {bindActionCreators} from 'redux';
 import {BrowserRouter, Route} from 'react-router-dom';
 import {withRouter} from 'react-router';

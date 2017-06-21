@@ -1,12 +1,13 @@
 import * as React from 'react';
 import './style.scss';
-import {staticData} from 'staticResources';
+import {personalData} from 'data';
+
 import Link from 'react-toolbox/lib/link/Link';
 import Navigation from 'react-toolbox/lib/navigation/Navigation'
+
 import FaGithubSquare from 'react-icons/lib/fa/github-square';
 import FaLinkedin from 'react-icons/lib/fa/linkedin';
 import MdMail from 'react-icons/lib/md/mail';
-let personalData = staticData.personalData;
 
 class Footer extends React.Component {
   constructor() {
