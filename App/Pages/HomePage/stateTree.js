@@ -1,5 +1,0 @@
-let stateTree = {
-
-};
-
-export {stateTree};
